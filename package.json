@@ -16,6 +16,7 @@
     "prepare": "husky"
   },
   "private": true,
+  "type": "module",
   "packageManager": "npm@11.6.2",
   "lint-staged": {
     "src/**/*.{ts,html,scss,json}": [
