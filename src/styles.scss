@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$theme: mat.define-theme();
+
+// Apply theme per-component to avoid bundling unused Material CSS.
+// Add a new mat.<component>-theme($theme) line each time you introduce
+// a Material component in a feature.
+html {
+  @include mat.core-theme($theme);
+  @include mat.button-theme($theme);
+  @include mat.icon-theme($theme);
+  @include mat.toolbar-theme($theme);
+  @include mat.sidenav-theme($theme);
+  @include mat.list-theme($theme);
+  @include mat.card-theme($theme);
+  @include mat.form-field-theme($theme);
+  @include mat.input-theme($theme);
+  @include mat.select-theme($theme);
+  @include mat.dialog-theme($theme);
+  @include mat.snack-bar-theme($theme);
+  @include mat.progress-spinner-theme($theme);
+  @include mat.paginator-theme($theme);
+  @include mat.table-theme($theme);
+  @include mat.chips-theme($theme);
+  @include mat.badge-theme($theme);
+  @include mat.tooltip-theme($theme);
+  @include mat.menu-theme($theme);
+}
