@@ -76,3 +76,20 @@ Detailed rules live in `.claude/rules/` and are auto-loaded each session:
 | `styling.md` | Tailwind + Material conventions |
 | `testing.md` | Unit and E2E testing requirements |
 | `commits.md` | Conventional Commits rules |
+
+---
+
+## Workflow
+
+Full pipeline documented in [`docs/WORKFLOW.md`](docs/WORKFLOW.md).
+
+```
+/spec <name>          →  interview → docs/specs/<name>.spec.md
+git checkout -b feat/<name>
+/feature-dev          →  implement + test + fix locally
+/review-pr            →  automated code review + fixes
+/commit               →  pre-commit hook + conventional commit
+/create-pr            →  push + open PR
+                         CI runs automatically
+                         merge on GitHub when green
+```
