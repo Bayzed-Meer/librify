@@ -1,8 +1,6 @@
 {
   "enabledPlugins": {
-    "github@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true
+    "playwright@claude-plugins-official": true
   },
   "hooks": {
     "PreToolUse": [
@@ -12,6 +10,10 @@
           {
             "type": "command",
             "command": "python3 /Users/bs01618/personal-projects/librify/.claude/hooks/block_sensitive_files_hook.py"
+          },
+          {
+            "type": "command",
+            "command": "python3 /Users/bs01618/personal-projects/librify/.claude/hooks/security_reminder_hook.py"
           }
         ]
       }

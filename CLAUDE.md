@@ -76,31 +76,3 @@ Detailed rules live in `.claude/rules/` and are auto-loaded each session:
 | `styling.md` | Tailwind + Material conventions |
 | `testing.md` | Unit and E2E testing requirements |
 | `commits.md` | Conventional Commits rules |
-
----
-
-## CLI Quick Reference
-
-```bash
-ng g c features/<name>/components/<component>  # component (OnPush + SCSS auto-applied)
-ng g s features/<name>/services/<service>       # service
-ng g g core/guards/<guard>                      # functional guard
-# Store slice: use /generate-store <name>
-```
-
----
-
-## Claude Code Tooling
-
-### Skills
-- `/scaffold` — scaffold Angular artifacts with project conventions
-- `/generate-store <name>` — generate NgRx slice (5 files)
-- `/add-route <name>` — add lazy-loaded feature route
-- `ng-test` (Claude-triggered) — generate Vitest tests with librify's zoneless patterns
-
-### Subagents (Claude-triggered)
-- `ngrx-conventions-reviewer` — validate NgRx slice files after store changes
-- `code-reviewer`, `silent-failure-hunter`, `pr-test-analyzer`, `type-design-analyzer`
-
-### MCP Servers
-- `context7` — live Angular 21 / NgRx 21 / Angular Material 21 docs (always use for API lookups)
